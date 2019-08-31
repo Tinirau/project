@@ -71,12 +71,14 @@ class GitCommit(models.Model):
 
     author_username = fields.Char(
         string="Username",
-        related="author_id.username"
+        related="author_id.username",
+        readonly = False,
     )
 
     author_avatar = fields.Char(
         string="Avatar",
-        related="author_id.avatar"
+        related="author_id.avatar",
+        readonly=False,
     )
 
     type = fields.Selection(
@@ -84,6 +86,7 @@ class GitCommit(models.Model):
         string="Type",
         required=False,
         related="branch_id.type",
+        readonly=False,
         store=True,
         index=True,
     )

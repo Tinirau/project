@@ -36,7 +36,8 @@ class GitBranch(models.Model):
         comodel_name="project.project",
         string="Project",
         related="repository_id.project_id",
-        store=True
+        readonly=False,
+        store=True,
     )
 
     type = fields.Selection(
@@ -44,6 +45,7 @@ class GitBranch(models.Model):
         string="Type",
         required=False,
         related="repository_id.type",
+        readonly=False,
         store=True,
         index=True,
     )

@@ -6,7 +6,7 @@
     "summary": "This module extends ``project_workflow_management``"
                "in order to provide transition constraints based on project.",
     "category": "Project",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "license": "LGPL-3",
     "author": "Modoolar",
     "website": "https://www.modoolar.com/",
